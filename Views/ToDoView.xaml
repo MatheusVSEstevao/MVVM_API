@@ -1,42 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xaml="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:xaml1="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MVVM_API_SampleProject.Views.ToDoView"
-             
              Title="ToDoView">
-    
-    
     <VerticalStackLayout>
-        <Label
-            Text="{Binding ToDO.Id}"
-            VerticalOptions="StartAndExpand"
-            HorizontalOptions="Center" />
-        
-        <Label
-            Text="{Binding ToDo.TaskId}"
-            VerticalOptions="StartAndExpand"
-            HorizontalOptions="Center" />
-        
-        <Label
-            Text="{Binding ToDo.Title}"
-            VerticalOptions="StartAndExpand"
-            HorizontalOptions="Center" />
 
-        <CheckBox x:Name="Status" />
-        <Label Text="Completed: ">
-            <Label.Triggers>
-                <DataTrigger TargetType="Label"
-                             Binding="{Binding Source={x:Boolean ToDo.Status}, Path=IsChecked}"
-                             Value="true">
-                <Setter Property="FontAttributes"
-                        Value="Italic, Bold" />
-                <Setter Property="FontSize"
-                        Value="16" />
-
-                </DataTrigger>
-
-            </Label.Triggers>
+        <Label>
+            
         </Label>
+        
+        <Label Text="{Binding ToDo.Id}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Label Text="{Binding ToDo.UserId}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+
+        <Label Text="{Binding ToDo.Title}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+
+        <Label Text="{Binding ToDo.Completed}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+        
+        
+        <CheckBox  x:Name="completed"  
+                   VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+    
 
 
 
